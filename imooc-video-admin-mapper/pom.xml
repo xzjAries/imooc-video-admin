@@ -8,11 +8,6 @@
   <artifactId>imooc-video-admin-mapper</artifactId>
   
   <dependencies>
-  	<dependency>
-  		<groupId>com.imooc</groupId>
-  		<artifactId>imooc-video-admin-pojo</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
   	
   	
   	<!-- Mybatis -->
@@ -42,7 +37,12 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>com.imooc</groupId>
+			<artifactId>imooc-video-admin-pojo</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
   </dependencies>
   
   

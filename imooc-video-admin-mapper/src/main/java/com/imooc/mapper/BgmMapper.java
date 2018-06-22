@@ -1,9 +1,10 @@
 package com.imooc.mapper;
 
-import com.imooc.pojo.Bgm;
-import com.imooc.pojo.BgmExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import com.imooc.pojo.Bgm;
+import com.imooc.pojo.BgmExample;
 
 public interface BgmMapper {
     int countByExample(BgmExample example);

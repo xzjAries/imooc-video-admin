@@ -1,9 +1,10 @@
 package com.imooc.mapper;
 
-import com.imooc.pojo.Videos;
-import com.imooc.pojo.VideosExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import com.imooc.pojo.Videos;
+import com.imooc.pojo.VideosExample;
 
 public interface VideosMapper {
     int countByExample(VideosExample example);

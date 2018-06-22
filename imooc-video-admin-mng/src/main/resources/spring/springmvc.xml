@@ -17,7 +17,7 @@
 	<!-- 通知spring使用cglib而不是jdk的来生成代理方法 AOP可以拦截到Controller --> 
 	<aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
 
-   <!--  <mvc:annotation-driven />  -->
+   <mvc:annotation-driven />
 	
 	<!-- 静态资源映射 -->
 	<!-- 缓存存在时间 cache-period 1年 -->
