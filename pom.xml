@@ -285,5 +285,6 @@
 		<module>imooc-video-admin-pojo</module>
 		<module>imooc-video-admin-mapper</module>
 		<module>imooc-video-admin-service</module>
+		<module>imooc-video-admin-mng</module>
 	</modules>
 </project>
