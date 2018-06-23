@@ -9,8 +9,8 @@
 
 <!-- 上下文对象路径 -->
 <input type="hidden" id="hdnContextPath" name="hdnContextPath" value="<%=request.getContextPath() %>"/>
-<input type="hidden" id="apiServer" name="apiServer" value="http://192.168.1.2:8081"/> 
-<input type="hidden" id="bgmServer" name="bgmServer" value="http://192.168.1.2:8080/mvc"/>
+<input type="hidden" id="apiServer" name="apiServer" value="http://192.168.199.167:8081"/> 
+<input type="hidden" id="bgmServer" name="bgmServer" value="http://192.168.199.167:8080/mvc"/>
 <!-- <input type="hidden" id="apiServer" name="apiServer" value="http://imoocdsp.com/imooc-video-mini-api"/> -->
 <!-- <input type="hidden" id="bgmServer" name="bgmServer" value="http://118.24.157.179/mvc"/> -->
 
@@ -27,7 +27,7 @@
 <script src="<%=request.getContextPath() %>/static/global/plugins/jquery-validation/js/jquery.validate.min.js?v=3.1415926" type="text/javascript"></script>
 <script src="<%=request.getContextPath() %>/static/global/plugins/jquery-validation/js/additional-methods.min.js?v=3.1415926" type="text/javascript"></script>
 
-<!-- END PAGE LEVEL PLUGINS -->
+<!-- END PAGE LEVEL PLUGINS --> 
 <!-- BEGIN THEME GLOBAL SCRIPTS -->
 <script src="<%=request.getContextPath() %>/static/global/scripts/app.js?v=3.1415926" type="text/javascript"></script>
 <!-- END THEME GLOBAL SCRIPTS -->

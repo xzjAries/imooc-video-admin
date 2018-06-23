@@ -86,7 +86,7 @@
 	            <div class="portlet-title">
 	                <div class="caption">
 	                    <i class="icon-microphone font-dark hide"></i>
-	                    <span class="caption-subject bold font-dark uppercase"> 慕课网</span>
+	                    <span class="caption-subject bold font-dark uppercase"> 秀动</span>
 	                    <span class="caption-helper">视频推荐</span>
 	                </div>
 	            </div>

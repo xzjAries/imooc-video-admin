@@ -53,8 +53,8 @@ var Login = function() {
                         if (data.status == 200 && data.msg == "OK") {
                         	window.location.href = hdnContextPath + "/center.action";
                         } else {
-//                        	SweetAlert.error(data.msg);
-                        	alert(data.msg);
+                       	SweetAlert.error(data.msg);
+                        //	alert(data.msg);
                         }
                     }
                 });
