@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [23/Jun/2018:10:30:09 +0800] "GET / HTTP/1.1" 302 - http-bio-8080-exec-1 569
+0:0:0:0:0:0:0:1 - - [23/Jun/2018:10:30:09 +0800] "GET /users/login.action HTTP/1.1" 200 9380 http-bio-8080-exec-7 272
+0:0:0:0:0:0:0:1 - - [23/Jun/2018:10:30:09 +0800] "GET /users/login.action HTTP/1.1" 200 9380 http-bio-8080-exec-2 273
+0:0:0:0:0:0:0:1 - - [23/Jun/2018:10:30:11 +0800] "POST /users/login.action HTTP/1.1" 200 58 http-bio-8080-exec-9 84
+0:0:0:0:0:0:0:1 - - [23/Jun/2018:10:30:11 +0800] "GET /center.action HTTP/1.1" 200 20766 http-bio-8080-exec-10 292
+0:0:0:0:0:0:0:1 - - [23/Jun/2018:10:30:14 +0800] "GET /users/logout.action HTTP/1.1" 200 9380 http-bio-8080-exec-10 4
+0:0:0:0:0:0:0:1 - - [23/Jun/2018:10:30:15 +0800] "POST /users/login.action HTTP/1.1" 200 58 http-bio-8080-exec-10 4
+0:0:0:0:0:0:0:1 - - [23/Jun/2018:10:30:15 +0800] "GET /center.action HTTP/1.1" 200 20766 http-bio-8080-exec-10 6
