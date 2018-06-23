@@ -116,7 +116,6 @@
     		url: $('#hdnContextPath').val() + '/video/addBgm.action',
     		type: 'POST',
     		success: function(data) {
-    			
     			if (data.status == 200 && data.msg == 'OK') {
     				alert('BGM添加成功...')
     			} else {

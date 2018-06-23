@@ -18,6 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.imooc.pojo.Bgm;
 import com.imooc.service.VideoService;
 import com.imooc.utils.IMoocJSONResult;
+import com.imooc.utils.PagedResult;
 
 @Controller
 @RequestMapping("video")
@@ -26,11 +27,22 @@ public class VideoController extends BaseController{
 	@Autowired
 	private VideoService videoService;
 	
+	@GetMapping("/showBgmList")
+	public String showAddList() {
+		return "video/bgmList";
+	}
+	
 	@GetMapping("/showAddBgm")
 	public String login() {
 		return "video/addBgm";
 	}
 	
+	
+	@PostMapping("/queryBgmList")
+	@ResponseBody
+	public PagedResult queryBgmList(Integer page) {
+		return videoService.queryBgmList(page, PAGE_SIZE);
+	}
 	
 	@PostMapping("/addBgm")
 	@ResponseBody
