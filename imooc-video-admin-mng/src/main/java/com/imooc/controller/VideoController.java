@@ -6,6 +6,7 @@ import java.io.InputStream;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,16 +15,29 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.imooc.pojo.User;
+import com.imooc.pojo.Bgm;
+import com.imooc.service.VideoService;
 import com.imooc.utils.IMoocJSONResult;
 
 @Controller
 @RequestMapping("video")
 public class VideoController extends BaseController{
 
+	@Autowired
+	private VideoService videoService;
+	
 	@GetMapping("/showAddBgm")
 	public String login() {
 		return "video/addBgm";
+	}
+	
+	
+	@PostMapping("/addBgm")
+	@ResponseBody
+	public IMoocJSONResult addBgm(Bgm bgm) {
+		System.out.println(bgm.toString());
+		videoService.addBgm(bgm);
+		return IMoocJSONResult.ok();
 	}
     
 	@PostMapping("/bgmUpload")
