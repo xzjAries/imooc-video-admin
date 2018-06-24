@@ -15,7 +15,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.imooc.enums.VideoStatusEnum;
 import com.imooc.pojo.Bgm;
+import com.imooc.pojo.User;
+import com.imooc.service.UsersService;
 import com.imooc.service.VideoService;
 import com.imooc.utils.IMoocJSONResult;
 import com.imooc.utils.PagedResult;
@@ -26,6 +29,13 @@ public class VideoController extends BaseController{
 
 	@Autowired
 	private VideoService videoService;
+	@Autowired
+	private UsersService usersService;
+	
+	@GetMapping("/showReportList")
+	public String showReportList() {
+		return "video/reportList";
+	}
 	
 	@GetMapping("/showBgmList")
 	public String showAddList() {
@@ -45,6 +55,13 @@ public class VideoController extends BaseController{
 		return IMoocJSONResult.ok();
 	}
 	
+	@PostMapping("/forbidVideo")
+	@ResponseBody
+	public IMoocJSONResult forbidVideo(String videoId) {
+		videoService.updateVideoStatus(videoId, VideoStatusEnum.FORBID.value);
+		return IMoocJSONResult.ok();
+	}
+	
 	@PostMapping("/queryBgmList")
 	@ResponseBody
 	public PagedResult queryBgmList(Integer page) {
@@ -59,6 +76,20 @@ public class VideoController extends BaseController{
 		return IMoocJSONResult.ok();
 	}
     
+	@PostMapping("/reportList")
+	@ResponseBody
+	public PagedResult reportList(Integer page, Integer pageSize){
+		if(page == null) {
+			page = 1;
+		}
+		
+		if(pageSize == null) {
+			pageSize = PAGE_SIZE;
+		}
+		PagedResult pagedResult = usersService.queryReportList(page, pageSize);
+		return pagedResult;
+	}
+	
 	@PostMapping("/bgmUpload")
 	@ResponseBody
 	public IMoocJSONResult bgmUpload(@RequestParam("file") MultipartFile[] files) throws Exception {
@@ -67,7 +98,7 @@ public class VideoController extends BaseController{
 		//String fileSpace = "C:\imooc_videos_dev";
 		//String fileSpace = File.separator + "imooc_videos_dev" + File.separator +"mvc_bgm";
 
-		String fileSpace = "C:" + File.separator + "imooc_videos_dev" + File.separator +"mvc_bgm";
+		String fileSpace = "C:" + File.separator + FILE_SPACE + File.separator +BGM_SPACE;
 		
 		//保存到数据库中的相对路径
 		String uploadPathDB =  File.separator + "bgm";
