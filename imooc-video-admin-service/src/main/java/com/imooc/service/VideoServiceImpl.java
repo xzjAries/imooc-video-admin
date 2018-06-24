@@ -48,4 +48,9 @@ public class VideoServiceImpl implements VideoService {
 		return result;
 	}
 
+	@Override
+	public void deteteBgm(String id) {
+          bgmMapper.deleteByPrimaryKey(id);		
+	}
+
 }

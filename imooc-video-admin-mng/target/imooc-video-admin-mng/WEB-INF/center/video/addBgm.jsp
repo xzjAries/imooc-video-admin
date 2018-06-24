@@ -122,7 +122,7 @@
     				alert('BGM添加失败...')
     			}
     			
-    			/* $("#bgmListMenu").click(); */
+    			 $("#bgmListMenu").click();
     		}
     	});
     }

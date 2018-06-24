@@ -38,6 +38,13 @@ public class VideoController extends BaseController{
 	}
 	
 	
+	@PostMapping("/delBgm")
+	@ResponseBody
+	public IMoocJSONResult delBgm(String bgmId) {
+		videoService.deteteBgm(bgmId);
+		return IMoocJSONResult.ok();
+	}
+	
 	@PostMapping("/queryBgmList")
 	@ResponseBody
 	public PagedResult queryBgmList(Integer page) {
